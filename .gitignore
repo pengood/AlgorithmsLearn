@@ -1,5 +1,11 @@
 *.class
-
+*.classpath
+*.txt
+*.bin
+*.project
+*.csv
+*.zip
+*.prefs
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
