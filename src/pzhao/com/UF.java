@@ -158,6 +158,9 @@ public class UF {
 			uf_quick.union(scanner3.nextInt(), scanner3.nextInt());
 		}
 		System.out.println("UF_quick cost time:"+(System.currentTimeMillis()-startLong2));
+		scanner.close();
+		scanner2.close();
+		scanner3.close();
 	}
 
 }

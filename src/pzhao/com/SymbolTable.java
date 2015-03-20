@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 class SequentialSearchST<Key, Value> implements Iterable<Key> {
 	private class Node {
-		Key key;
+	private	Key key;
 		Value value;
 		Node next;
 
@@ -232,6 +232,7 @@ class BinarySearchST<Key extends Comparable<Key>, Value> implements
 }
 
 public class SymbolTable {
+	@SuppressWarnings("resource")
 	public static void main(String[] argus) throws IOException {
 		// int MinLen = 0;
 		// SequentialSearchST<String, Integer> st = new SequentialSearchST<>();
