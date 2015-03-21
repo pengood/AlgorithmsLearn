@@ -12,4 +12,4 @@
 <br>
 [union-find算法](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/UF.java)
 <br>
-[红黑数](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/RedBlackBST.java)
+[红黑树](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/RedBlackBST.java)
