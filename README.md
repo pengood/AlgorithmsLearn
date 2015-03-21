@@ -1,7 +1,13 @@
 #AlgorithmsLearn
-test
-<<<<<<< HEAD
-test2
-test4
-=======
->>>>>>> b1afba59fa6ef6043188d836c31dec5921017d8f
+<br>
+[二叉查找树](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/BST.java)
+<br>
+[二分搜索](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/BST.java)
+<br>
+[优先队列（二叉堆）](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/PQTest.java)
+<br>
+[排序](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/Sort.java)
+<br>
+[符号表（无序链表+有序数组）](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/SymbolTable.java)
+<br>
+[union-find算法](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/UF.java)
