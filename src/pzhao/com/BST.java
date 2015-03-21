@@ -1,6 +1,10 @@
 package pzhao.com;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.NoSuchElementException;
+import java.util.Random;
+import java.util.Scanner;
 
 
 public class BST <Key extends Comparable<Key>,Value>{
@@ -37,9 +41,9 @@ public class BST <Key extends Comparable<Key>,Value>{
 		if(xNode==null) return new Node(key, value, 1);
 		int cmp=key.compareTo(xNode.key);
 		if(cmp<0)xNode.left=put(xNode.left, key, value);
-		if(cmp>0)xNode.right=put(xNode.right,key , value);
+		else if(cmp>0)xNode.right=put(xNode.right,key , value);
 		else xNode.value=value;
-		xNode.N=xNode.left.N+xNode.right.N+1;
+		xNode.N=size(xNode.left)+size(xNode.right)+1;
 		return xNode;
 	}
 	
@@ -102,9 +106,9 @@ public class BST <Key extends Comparable<Key>,Value>{
 	private Key select(Node x, int k){
 		if(x==null)return null;
 		int t=x.left.N;
-		if(k==t)return x.key;
+		if(k==t)return x.left.key;
 		if(k<t)return select(x.left, k);
-		return select(x, k-t-1);
+		return select(x.right, k-t-1);
 	}
 	
 	public int rank(Key key){
@@ -113,9 +117,9 @@ public class BST <Key extends Comparable<Key>,Value>{
 	private int rank(Node x,Key key){
 		if(x==null)return 0;
 		int cmp=key.compareTo(x.key);
-		if(cmp==0)return x.left.N;	
+		if(cmp==0)return size(x.left);	
 		if(cmp<0) return rank(x.left,key);
-		return x.left.N+1+rank(x.right,key);
+		return size(x.left)+1+rank(x.right,key);
 	}
 	
 	public void delMin(){
@@ -171,5 +175,21 @@ public class BST <Key extends Comparable<Key>,Value>{
 		x.N=x.left.N+x.right.N+1;
 		return x;
 	}
+	
+	public static void main(String [] argus)throws IOException{
+		BST<Integer, String> bst=new BST();
+		int[] a={51,36,12,28,67,64,54,98,74,80};
+		Random random=new Random();
+		Scanner scanner = new Scanner(new File("tinyTale.txt"));
+		for(int i=0;i<10;i++){
+			bst.put(a[i], ""+scanner.next());
+		}
+		bst.delete(51);
+		System.out.println(bst.select(5));
+		System.out.println(bst.rank(54));
+		System.out.println(bst.floor(97));
+		System.out.println(bst.celling(63));
+		
+ 	}
 	
 }
