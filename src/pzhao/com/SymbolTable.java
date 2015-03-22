@@ -39,6 +39,45 @@ class SequentialSearchST<Key, Value> implements Iterable<Key> {
 		}
 		return null;
 	}
+	
+	public void delete_1(Key key){
+		Node xNode=first;
+		Node previousNode=xNode;
+		while(xNode!=null&&!key.equals(xNode.key)){
+			previousNode=xNode;
+			xNode=xNode.next;
+		}
+		if(xNode==null) return;
+		else {
+			if(xNode==first)
+				first=first.next;
+			else {
+				previousNode.next=xNode.next;
+			}
+		}
+	}
+	
+	public void delete(Key key){
+		first=delete(first, key);
+	}
+	
+	private Node delete(Node x,Key key){
+		if(x==null)return null;
+		Node previous =x;
+		while(!x.key.equals(key)){
+			if(x.next==null)return null;
+			else{
+				previous=x;
+				x=x.next;
+			}
+		}
+		N--;
+		if(x==first)return first.next;
+		else {
+			previous.next=x.next;
+		}
+		return first;
+	}
 
 	public boolean contains(Key key) {
 		return get(key) != null;
@@ -281,5 +320,15 @@ public class SymbolTable {
 				max=wordString;
 		}
 		System.out.print("max: "+max+": "+binarySearchST.get(max));
+		System.out.println();
+		SequentialSearchST<String, Integer> st = new SequentialSearchST<>();
+		for(int i=0;i<5;i++){
+			st.put("a"+i, i);
+		}
+	//	st.delete("a0");
+		st.delete_1("a2");
+		 Iterator<String> iterator1 = st.iterator();
+			while(iterator1.hasNext())
+				System.out.print(iterator1.next()+" ");
 	}
 }
