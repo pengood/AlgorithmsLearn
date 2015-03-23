@@ -13,3 +13,7 @@
 [二叉查找树](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/BST.java)
 <br>
 [红黑树](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/RedBlackBST.java)
+<br>
+[拉链法散列表](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/SeparateChainingHashST.java)
+<br>
+[线性探测散列表](https://github.com/pengood/AlgorithmsLearn/blob/master/src/pzhao/com/LinearProbingHashST.java)
