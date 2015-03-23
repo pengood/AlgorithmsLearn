@@ -334,5 +334,9 @@ public class SymbolTable {
 		 Iterator<String> iterator1 = st.iterator();
 			while(iterator1.hasNext())
 				System.out.print(iterator1.next()+" ");
+		System.out.println();
+			for(String a:st){
+			System.out.print(a+" ");
+		}
 	}
 }

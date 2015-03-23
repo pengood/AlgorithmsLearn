@@ -43,7 +43,7 @@ public class Stack<Item>implements Iterable<Item> {
 			@Override
 			public boolean hasNext() {
 				// TODO Auto-generated method stub
-				return top>=0;
+				return top>0;
 			}
 
 			@Override
@@ -62,11 +62,15 @@ public class Stack<Item>implements Iterable<Item> {
 //		for(int i=0;i<10;i++){
 //		System.out.print(stack.pop()+" ");	
 //		}
-		System.out.println(stack);
+	//	System.out.println(stack);
 		//System.out.print(stack.peek()+" ");	
-		Iterator<Integer>iterator=stack.iterator();
-		while(iterator.hasNext()){
-	//		System.out.print(iterator.next()+" ");
+//		Iterator<Integer>iterator=stack.iterator();
+//		while(iterator.hasNext()){
+//	//		System.out.print(iterator.next()+" ");
+//		}
+		System.out.println();
+		for(int i:stack){
+			System.out.print(i+" ");
 		}
 	}
 	
