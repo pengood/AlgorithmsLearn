@@ -21,6 +21,10 @@ class SequentialSearchST<Key, Value> implements Iterable<Key> {
 	private Node first;
 	private int N;
 
+	public int size(){
+		return N;
+	}
+	
 	public void put(Key key, Value value) {
 		for (Node xNode = first; xNode != null; xNode = xNode.next) {
 			if (key.equals(xNode.key)) {
