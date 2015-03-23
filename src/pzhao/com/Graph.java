@@ -85,6 +85,45 @@ class BreadthFirstPath {
 
 }
 
+class CC{
+	boolean[] marked;
+	private int[] id;
+	private int count;
+	
+	public CC(Graph graph){
+		marked=new boolean[graph.V()];
+		id=new int[graph.V()];
+		for(int i=0;i<graph.V();i++){
+			if(!marked[i]){
+				count++;
+				dfs(graph, i);
+			}
+		}
+	}
+	
+	private void dfs(Graph graph,int s){
+		marked[s]=true;
+		id[s]=count;
+		for(int v:graph.adj(s)){
+			if(!marked[v])
+				dfs(graph, v);
+		}
+	}
+	
+	public boolean connected(int v,int w){
+		return id[v]==id[w];
+	}
+	public int id(int v){
+		return id[v];
+	}
+	
+	public int count(){
+		return count;
+				
+	}
+	
+}
+
 public class Graph {
 
 	private Bag<Integer>[] adj;
@@ -152,7 +191,11 @@ public class Graph {
 		DepthFirstSearch dfs = new DepthFirstSearch(graph, 0);
 		System.out.println(dfs.pathTo(4));
 		BreadthFirstPath bfp=new BreadthFirstPath(graph, 0);
-		System.out.print(bfp.pathTo(4));
+		System.out.println(bfp.pathTo(4));
+		In in1 = new In(new File("tinyG.txt"));
+		Graph graph1 = new Graph(in1);
+		CC cc=new CC(graph1);
+		System.out.print(cc.count());
 		
 	}
 }
