@@ -7,7 +7,7 @@ public class Stack<Item>implements Iterable<Item> {
 	private int N;
 	private int top;
 	public Stack(){
-		this(5);
+		this(10);
 	}
 	@SuppressWarnings("unchecked")
 	public Stack(int n){
@@ -25,6 +25,14 @@ public class Stack<Item>implements Iterable<Item> {
 	
 	public Item peek(){
 		return items[top-1];
+	}
+	
+	public String toString(){
+		StringBuilder sb=new StringBuilder();
+		for(int i=top-1;i>=0;i--){
+			sb.append(items[i]+" ");
+		}
+		return sb.toString();
 	}
 
 	@Override
@@ -54,10 +62,11 @@ public class Stack<Item>implements Iterable<Item> {
 //		for(int i=0;i<10;i++){
 //		System.out.print(stack.pop()+" ");	
 //		}
-		System.out.print(stack.peek()+" ");	
+		System.out.println(stack);
+		//System.out.print(stack.peek()+" ");	
 		Iterator<Integer>iterator=stack.iterator();
 		while(iterator.hasNext()){
-			System.out.print(iterator.next()+" ");
+	//		System.out.print(iterator.next()+" ");
 		}
 	}
 	
