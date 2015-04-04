@@ -4,7 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Scanner;
-
+/*
+ * 基于无序链表的顺序查找
+ * 
+ */
 class SequentialSearchST<Key, Value> implements Iterable<Key> {
 	private class Node {
 	private	Key key;
@@ -113,6 +116,10 @@ class SequentialSearchST<Key, Value> implements Iterable<Key> {
 
 }
 
+/*
+ * 基于有序数组的二分查找
+ * 
+ */
 class BinarySearchST<Key extends Comparable<Key>, Value> implements
 		Iterable<Key> {
 	private Key[] keys;

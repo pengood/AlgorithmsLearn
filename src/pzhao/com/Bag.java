@@ -1,7 +1,13 @@
-package pzhao.com;
-
+package pzhao.com; 
 import java.util.Iterator;
 
+/**
+ * Bag 是一种不支持删除元素的集合数据类型
+ * 
+ * @author zhaopeng
+ *
+ * @param <Item>
+ */
 public class Bag<Item> implements Iterable<Item> {
 	
 	private class Node{

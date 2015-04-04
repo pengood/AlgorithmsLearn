@@ -1,12 +1,11 @@
 package pzhao.com;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.util.Arrays;
 
-import edu.princeton.cs.introcs.In;
-
+/**
+ * 二分查找
+ * @author zhaopeng
+ *
+ */
 public class BinarySearch {
 	public static int rank(int key, int[] a) {
 		int lo = 0;

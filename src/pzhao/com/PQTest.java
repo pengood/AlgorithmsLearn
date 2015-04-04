@@ -2,7 +2,10 @@ package pzhao.com;
 
 import java.util.NoSuchElementException;
 import java.util.Random;
-
+/*
+ * 优先队列
+ * 堆排序
+ */
 class MinPQ<Key> {
 	private Key[] Keys;
 	private int N;

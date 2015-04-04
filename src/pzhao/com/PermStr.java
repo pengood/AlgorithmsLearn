@@ -1,5 +1,10 @@
 package pzhao.com;
 
+/**
+ * 给定字符串打印全排列
+ * @author zhaopeng
+ *
+ */
 public class PermStr {
 	public static final int SWITCH = 1; // 是否去除重复的开关, 1表示去重, 0表示不去重, 默认为1
 

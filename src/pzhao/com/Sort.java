@@ -1,7 +1,11 @@
 package pzhao.com;
-
 import java.util.Random;
-
+/*
+ *选择排序
+ *1.运行时间与输入无关
+ *2.数据移动最少  N次交换。 
+ * 
+ */
 class Selection {
 	public static void exch(Comparable[] a, int i, int j) {
 		Comparable tmp = a[i];
@@ -22,6 +26,13 @@ class Selection {
 
 	}
 }
+/*
+ * 插入排序
+ * 对于部分有序的数组十分高效，也适合小规模数组
+ * 需要交换次数与数组中倒置数量相等
+ * 需要比较的次数>=倒置的数量，<=倒置数量+数组大小-1
+ * 稳定
+ */
 
 class Insertion {
 	public static void sort(Comparable[] a) {
@@ -37,7 +48,10 @@ class Insertion {
 
 	}
 }
-
+/*
+ * 希尔排序对中等大小的数组需要运行的时间可以接受的，并且不需要额外的空间
+ * 
+ */
 class Shell {
 	public static void sort(Comparable[] a) {
 		int n = a.length;
@@ -58,7 +72,12 @@ class Shell {
 
 	}
 }
-
+/*
+ * 归并排序是一种渐进最优的比较排序方法
+ * 最坏情况下的比较次数为~NlgN
+ * 需要额外空间
+ * 稳定
+ */
 class Merge {
 	private static Comparable[] aux;
 
@@ -104,6 +123,11 @@ class Merge {
 
 }
 
+/*
+ * 快速排序一般都比希尔排序和归并排序快，因为它内循环没有移动数据，比较次数少
+ * 快速排序最好的情况是每次正好将数组对半分
+ * 改进：三向切分快速排序
+ */
 class Quick{
 	public static void sort(Comparable[] a){
 		sort(a, 0, a.length-1);
@@ -127,6 +151,7 @@ class Quick{
 		return j;
 	}
 }
+
 
 public class Sort {
 	public static Comparable[] genComparables(int n) {

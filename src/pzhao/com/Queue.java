@@ -3,6 +3,13 @@ package pzhao.com;
 import java.util.Iterator;
 
 
+/**
+ * 
+ * 先进先出队列是一种基于先进先出策略的集合类型
+ * @author zhaopeng
+ *
+ * @param <Item>
+ */
 public class Queue <Item>implements Iterable<Item> {
 	private class Node{
 		private Item item;

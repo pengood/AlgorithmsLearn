@@ -2,6 +2,12 @@ package pzhao.com;
 
 import java.util.Iterator;
 
+/**
+ * 栈是一种基于先进后出策略的集合类型
+ * @author zhaopeng
+ *
+ * @param <Item>
+ */
 public class Stack<Item>implements Iterable<Item> {
 	private Item[] items;
 	private int N;

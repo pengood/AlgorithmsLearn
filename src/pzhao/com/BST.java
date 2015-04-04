@@ -7,6 +7,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 
+/**
+ * @author zhaopeng
+ *二叉树
+ * @param <Key>
+ * @param <Value>
+ */
 public class BST <Key extends Comparable<Key>,Value>{
 	private class Node{ 
 		private Key key;
